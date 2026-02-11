@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Question For You ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Custom cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Floating hearts layer (always present) -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- ========== SECTION 1: HERO ========== -->
+  <section class="section hero" id="hero">
+    <div class="parallax-bg hero-bg"></div>
+    <div class="parallax-mid hero-petals" id="heroPetals"></div>
+    <div class="hero-content">
+      <div class="hero-envelope" id="heroEnvelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="letter-pull">
+            <span class="letter-text">A letter for you...</span>
+          </div>
+        </div>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line title-line-1">I've been</span>
+        <span class="title-line title-line-2">meaning to</span>
+        <span class="title-line title-line-3">ask you something</span>
+      </h1>
+      <div class="scroll-hint">
+        <span>scroll down</span>
+        <div class="scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: REASONS / SWEET MESSAGES ========== -->
+  <section class="section reasons" id="reasons">
+    <div class="parallax-bg reasons-bg"></div>
+    <div class="reasons-content">
+      <h2 class="reasons-heading">But first, a few things...</h2>
+      <div class="reasons-grid">
+        <div class="reason-card" data-delay="0">
+          <div class="reason-icon">✿</div>
+          <p class="reason-text">Every time you laugh, I forget what I was worried about</p>
+        </div>
+        <div class="reason-card" data-delay="1">
+          <div class="reason-icon">☽</div>
+          <p class="reason-text">You make ordinary days feel like little adventures</p>
+        </div>
+        <div class="reason-card" data-delay="2">
+          <div class="reason-icon">♫</div>
+          <p class="reason-text">My favorite place in the world is next to you</p>
+        </div>
+        <div class="reason-card" data-delay="3">
+          <div class="reason-icon">❋</div>
+          <p class="reason-text">You're the first person I want to tell everything to</p>
+        </div>
+        <div class="reason-card" data-delay="4">
+          <div class="reason-icon">◈</div>
+          <p class="reason-text">With you, silence is just as comfortable as conversation</p>
+        </div>
+        <div class="reason-card" data-delay="5">
+          <div class="reason-icon">♥</div>
+          <p class="reason-text">You make me want to be a better person, every single day</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: THE BIG QUESTION ========== -->
+  <section class="section question" id="question">
+    <div class="parallax-bg question-bg"></div>
+    <div class="question-content">
+      <div class="question-frame">
+        <div class="frame-corner frame-tl"></div>
+        <div class="frame-corner frame-tr"></div>
+        <div class="frame-corner frame-bl"></div>
+        <div class="frame-corner frame-br"></div>
+        <h2 class="question-title">Will you be my</h2>
+        <h1 class="question-valentine">Valentine?</h1>
+        <div class="buttons-area" id="buttonsArea">
+          <button class="btn btn-yes" id="btnYes">
+            <span>Yes!</span>
+            <div class="btn-hearts">
+              <span>♥</span><span>♥</span><span>♥</span>
+            </div>
+          </button>
+          <button class="btn btn-no" id="btnNo">
+            <span id="noText">No</span>
+          </button>
+        </div>
+        <p class="no-message" id="noMessage"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: CELEBRATION ========== -->
+  <section class="section celebration" id="celebration">
+    <div class="parallax-bg celebration-bg"></div>
+    <canvas id="confettiCanvas"></canvas>
+    <div class="celebration-content" id="celebrationContent">
+      <div class="celebration-heart-burst" id="heartBurst"></div>
+      <h1 class="celebration-title">I knew you'd say yes!</h1>
+      <p class="celebration-sub">You just made me the happiest person alive</p>
+      <div class="celebration-date">
+        <span class="date-label">Save the date</span>
+        <span class="date-value">February 14th</span>
+        <span class="date-year">with me ♥</span>
+      </div>
+      <div class="celebration-xo">
+        <span>X</span><span>O</span><span>X</span><span>O</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
