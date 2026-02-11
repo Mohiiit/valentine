@@ -149,22 +149,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const yesGrow = 1 + noAttempts * 0.06;
     btnYes.style.transform = `scale(${Math.min(yesGrow, 1.4)})`;
 
-    // Move to random position within the question section
-    const section = getQuestionSection();
-    const sectionRect = section.getBoundingClientRect();
+    // Use the visible viewport area to constrain the button
+    const viewportW = window.innerWidth;
+    const viewportH = window.innerHeight;
     const btnRect = btnNo.getBoundingClientRect();
+    const areaRect = buttonsArea.getBoundingClientRect();
 
     const padding = 20;
-    const maxX = sectionRect.width - btnRect.width - padding * 2;
-    const maxY = sectionRect.height - btnRect.height - padding * 2;
+    const btnW = btnRect.width * noScale;
+    const btnH = btnRect.height * noScale;
 
-    const newX = padding + Math.random() * maxX;
-    const newY = padding + Math.random() * maxY;
+    // Calculate random position within visible viewport
+    const randomViewX = padding + Math.random() * (viewportW - btnW - padding * 2);
+    const randomViewY = padding + Math.random() * (viewportH - btnH - padding * 2);
 
-    // Position relative to the buttons area
-    const areaRect = buttonsArea.getBoundingClientRect();
-    const relX = newX - (areaRect.left - sectionRect.left);
-    const relY = newY - (areaRect.top - sectionRect.top);
+    // Convert viewport coords to position relative to buttonsArea
+    const relX = randomViewX - areaRect.left;
+    const relY = randomViewY - areaRect.top;
 
     btnNo.style.left = relX + 'px';
     btnNo.style.top = relY + 'px';
